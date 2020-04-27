@@ -9,7 +9,7 @@ export const shapeStyle = {
   fontFamily:
     "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif",
   shapeBackground: "hsla(210, 16%, 93%, 0.2)",
-  shapeStrokeStyle: "ff0000",
+  shapeStrokeStyle: "#387eff",
   shapeShadowStyle: "hsla(210, 9%, 31%, 0.35)"
 };
 
