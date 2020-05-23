@@ -159,7 +159,7 @@ export default class ReactPictureAnnotation extends React.Component<
           onMouseMove={this.onMouseMove}
           onMouseUp={this.onMouseUp}
           onMouseLeave={this.onMouseLeave}
-          onWheel={this.onWheel}
+          //    onWheel={this.onWheel}
         />
         {showInput && (
           <div className="rp-selected-input" style={inputPosition}>
