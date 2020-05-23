@@ -105,7 +105,7 @@ export class RectShape implements IShape {
     canvas2D.shadowBlur = 10;
     canvas2D.shadowColor = shapeStyle.shapeShadowStyle;
     canvas2D.strokeStyle = shapeStyle.shapeStrokeStyle;
-    canvas2D.lineWidth = 2;
+    canvas2D.lineWidth = 4;
     canvas2D.strokeRect(x, y, width, height);
     canvas2D.restore();
     if (selected) {
@@ -119,8 +119,8 @@ export class RectShape implements IShape {
         canvas2D.save();
         canvas2D.fillStyle = shapeStyle.fontBackground;
         canvas2D.fillRect(
-          x,
-          y,
+          x + 2,
+          y + 2,
           metrics.width + shapeStyle.padding * 2,
           shapeStyle.fontSize + shapeStyle.padding * 2
         );

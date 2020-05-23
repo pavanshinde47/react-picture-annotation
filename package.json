@@ -82,7 +82,9 @@
     "typescript": "^3.5.1",
     "semantic-release": "^15.13.16"
   },
-  "dependencies": {},
+  "dependencies": {
+    "babel-preset-react-app": "^9.1.2"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
