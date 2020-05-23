@@ -389,38 +389,38 @@ export default class ReactPictureAnnotation extends React.Component<
     this.currentAnnotationState.onMouseLeave();
   };
 
-  private onWheel = (event: React.WheelEvent<HTMLCanvasElement>) => {
-    // https://stackoverflow.com/a/31133823/9071503
-    const { clientHeight, scrollTop, scrollHeight } = event.currentTarget;
-    if (clientHeight + scrollTop + event.deltaY > scrollHeight) {
-      // event.preventDefault();
-      event.currentTarget.scrollTop = scrollHeight;
-    } else if (scrollTop + event.deltaY < 0) {
-      // event.preventDefault();
-      event.currentTarget.scrollTop = 0;
-    }
+  // private onWheel = (event: React.WheelEvent<HTMLCanvasElement>) => {
+  //   // https://stackoverflow.com/a/31133823/9071503
+  //   const { clientHeight, scrollTop, scrollHeight } = event.currentTarget;
+  //   if (clientHeight + scrollTop + event.deltaY > scrollHeight) {
+  //     // event.preventDefault();
+  //     event.currentTarget.scrollTop = scrollHeight;
+  //   } else if (scrollTop + event.deltaY < 0) {
+  //     // event.preventDefault();
+  //     event.currentTarget.scrollTop = 0;
+  //   }
 
-    const { scale: preScale } = this.scaleState;
-    this.scaleState.scale += event.deltaY * 0.005;
-    if (this.scaleState.scale > 10) {
-      this.scaleState.scale = 10;
-    }
-    if (this.scaleState.scale < 0.1) {
-      this.scaleState.scale = 0.1;
-    }
+  //   const { scale: preScale } = this.scaleState;
+  //   this.scaleState.scale += event.deltaY * 0.005;
+  //   if (this.scaleState.scale > 10) {
+  //     this.scaleState.scale = 10;
+  //   }
+  //   if (this.scaleState.scale < 0.1) {
+  //     this.scaleState.scale = 0.1;
+  //   }
 
-    const { originX, originY, scale } = this.scaleState;
-    const { offsetX, offsetY } = event.nativeEvent;
-    this.scaleState.originX =
-      offsetX - ((offsetX - originX) / preScale) * scale;
-    this.scaleState.originY =
-      offsetY - ((offsetY - originY) / preScale) * scale;
+  //   const { originX, originY, scale } = this.scaleState;
+  //   const { offsetX, offsetY } = event.nativeEvent;
+  //   this.scaleState.originX =
+  //     offsetX - ((offsetX - originX) / preScale) * scale;
+  //   this.scaleState.originY =
+  //     offsetY - ((offsetY - originY) / preScale) * scale;
 
-    this.setState({ imageScale: this.scaleState });
+  //   this.setState({ imageScale: this.scaleState });
 
-    requestAnimationFrame(() => {
-      this.onShapeChange();
-      this.onImageChange();
-    });
-  };
+  //   requestAnimationFrame(() => {
+  //     this.onShapeChange();
+  //     this.onImageChange();
+  //   });
+  // };
 }
