@@ -1,6 +1,6 @@
 import { IShape, IShapeBase } from "Shape";
 
-const NODE_WIDTH = 10;
+const NODE_WIDTH = 20;
 
 export interface ITransformer {
   checkBoundary: (positionX: number, positionY: number) => boolean;
@@ -49,7 +49,7 @@ export default class Transformer implements ITransformer {
   ) => {
     const allCentersTable = this.getAllCentersTable();
     canvas2D.save();
-    canvas2D.fillStyle = "#5c7cfa";
+    canvas2D.fillStyle = "#fcba03";
 
     for (const item of allCentersTable) {
       const { x, y, width, height } = calculateTruePosition({

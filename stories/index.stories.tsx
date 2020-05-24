@@ -57,7 +57,7 @@ storiesOf("Hello World", module)
           onChange={data => setAnnotationData(data)}
           selectedId={selectedId}
           onSelect={e => setSelectedId(e)}
-          image="https://bequank.oss-cn-beijing.aliyuncs.com/landpage/large/60682895_p0_master1200.jpg"
+          image="https://source.unsplash.com/random/800x600"
         />
       );
     };

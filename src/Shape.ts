@@ -119,8 +119,8 @@ export class RectShape implements IShape {
         canvas2D.save();
         canvas2D.fillStyle = shapeStyle.fontBackground;
         canvas2D.fillRect(
-          x + 2,
-          y + 2,
+          x,
+          y - 25,
           metrics.width + shapeStyle.padding * 2,
           shapeStyle.fontSize + shapeStyle.padding * 2
         );
@@ -129,7 +129,7 @@ export class RectShape implements IShape {
         canvas2D.fillText(
           comment,
           x + shapeStyle.padding,
-          y + shapeStyle.padding
+          y + shapeStyle.padding - 25
         );
       }
     }
