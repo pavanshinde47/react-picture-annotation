@@ -4,8 +4,8 @@ export const shapeStyle = {
   padding: 5,
   margin: 10,
   fontSize: 12,
-  fontColor: "#212529",
-  fontBackground: "#f8f9fa",
+  fontColor: "#000000",
+  fontBackground: "#fcba03",
   fontFamily:
     "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif",
   shapeBackground: "hsla(210, 16%, 93%, 0.2)",
